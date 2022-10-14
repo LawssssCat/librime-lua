@@ -1581,8 +1581,7 @@ namespace RimeApiReg {
   }
 
 // boost::regex api
-  optional<std::vector<string>> regex_search(
-      const string &target ,const string &pattern )
+  optional<std::vector<string>> regex_search(const string &target ,const string &pattern )
   {
     boost::regex reg(pattern);
     boost::smatch sm;
@@ -1608,10 +1607,10 @@ namespace RimeApiReg {
   }
 
   static const luaL_Reg funcs[]= {
-    { "regex_match", WRAP(regex_match) },
-    { "regex_search", WRAP(regex_match) },
-    { "regex_replace", WRAP(regex_match) },
-    { "get_rime_version", WRAP(get_rime_version) },
+    // { "regex_match", WRAP(regex_match) },
+    { "regex_search", WRAP(regex_search) },
+    { "regex_replace", WRAP(regex_replace) },
+    // { "get_rime_version", WRAP(get_rime_version) },
     { "get_shared_data_dir", WRAP(get_shared_data_dir) },
     { "get_user_data_dir", WRAP(get_user_data_dir) },
     { "get_sync_dir", WRAP(get_sync_dir) },
