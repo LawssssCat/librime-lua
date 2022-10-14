@@ -1608,6 +1608,9 @@ namespace RimeApiReg {
   }
 
   static const luaL_Reg funcs[]= {
+    { "regex_match", WRAP(regex_match) },
+    { "regex_search", WRAP(regex_search) },
+    { "regex_replace", WRAP(regex_replace) },
     { "get_rime_version", WRAP(get_rime_version) },
     { "get_shared_data_dir", WRAP(get_shared_data_dir) },
     { "get_user_data_dir", WRAP(get_user_data_dir) },
@@ -1616,9 +1619,6 @@ namespace RimeApiReg {
     { "get_distribution_code_name", WRAP(get_distribution_code_name) },
     { "get_distribution_version", WRAP(get_distribution_version) },
     { "get_user_id", WRAP(get_user_id) },
-    { "regex_match", WRAP(regex_match) },
-    { "regex_search", WRAP(regex_search) },
-    { "regex_replace", WRAP(regex_replace) },
     { NULL, NULL },
   };
 
