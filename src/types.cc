@@ -1609,8 +1609,8 @@ namespace RimeApiReg {
 
   static const luaL_Reg funcs[]= {
     { "regex_match", WRAP(regex_match) },
-    { "regex_search", WRAP(regex_search) },
-    { "regex_replace", WRAP(regex_replace) },
+    { "regex_search", WRAP(regex_match) },
+    { "regex_replace", WRAP(regex_match) },
     { "get_rime_version", WRAP(get_rime_version) },
     { "get_shared_data_dir", WRAP(get_shared_data_dir) },
     { "get_user_data_dir", WRAP(get_user_data_dir) },
